@@ -398,27 +398,42 @@
     }
     .publication-extra.is-open { max-height: 800px; opacity: 1; }
     .publication-extra-inner {
-      padding-top: 24px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+      margin-top: 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      background: linear-gradient(135deg, rgba(212,150,125,0.05) 0%, rgba(212,150,125,0.02) 100%);
+      border: 1px solid rgba(212,150,125,0.18);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .publication-extra-inner > div {
+      padding: 28px 32px;
+    }
+    .publication-extra-inner > div:first-child {
+      border-right: 1px solid rgba(212,150,125,0.15);
     }
     .pub-block-title {
-      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.13em; color: #D4967D; margin-bottom: 10px;
+      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.16em; color: #D4967D; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .pub-block-title::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 1.5px;
+      background: #D4967D;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .pub-block-title + .pub-block-title,
+    .pub-block-title[style*="margin-top"] {
+      margin-top: 24px;
     }
     .pub-block-text {
-      font-size: 0.8rem; line-height: 1.75; color: #303636; opacity: 0.8;
+      font-size: 0.8rem; line-height: 1.8; color: #303636; opacity: 0.82;
     }
-    .pub-read-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      margin-top: 20px; padding: 7px 20px;
-      border: 1px solid #D4967D; border-radius: 50px;
-      color: #D4967D; font-size: 0.72rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      text-decoration: none; transition: all 0.25s ease;
-    }
-    .pub-read-link:hover { background: #D4967D; color: #fff; }
     @media (max-width: 768px) {
-      .publication-extra-inner { grid-template-columns: 1fr; gap: 20px; }
+      .publication-extra-inner { grid-template-columns: 1fr; }
+      .publication-extra-inner > div:first-child { border-right: none; border-bottom: 1px solid rgba(212,150,125,0.15); }
     }
 
     /* Dropdown */
@@ -876,13 +891,13 @@
               <div>
                 <p class="pub-block-title"><span class="fr">Objet de la recherche</span><span class="en">Research focus</span></p>
                 <p class="pub-block-text"><span class="fr">Travail de recherche approfondi consacré à la reconnaissance juridique de l'animal et à la pertinence de la distinction entre animaux domestiques et animaux sauvages en droit français, à la lumière des évolutions scientifiques, sociétales et européennes.</span><span class="en">An in-depth research project on the legal recognition of animals and the relevance of the domestic/wild animal distinction in French law, examined through the lens of scientific, social and European developments.</span></p>
-                <p class="pub-block-title" style="margin-top:20px"><span class="fr">Approche</span><span class="en">Methodology</span></p>
+                <p class="pub-block-title" style="margin-top:24px"><span class="fr">Approche</span><span class="en">Methodology</span></p>
                 <p class="pub-block-text"><span class="fr">Croisement de sources doctrinales, jurisprudentielles et normatives — droit interne, droit comparé et instruments européens — enrichi d'apports issus de l'éthologie, des neurosciences et des sciences du comportement.</span><span class="en">Cross-referencing doctrinal, jurisprudential and normative sources — domestic law, comparative law and European instruments — supplemented by ethology, neuroscience and behavioural sciences.</span></p>
               </div>
               <div>
                 <p class="pub-block-title"><span class="fr">Application professionnelle</span><span class="en">Professional application</span></p>
                 <p class="pub-block-text"><span class="fr">Ce travail constitue aujourd'hui le socle de mes activités d'analyse, de rédaction spécialisée et de traduction technique dans le domaine de la protection animale. Il nourrit ma pratique au quotidien et me permet d'aborder des sujets complexes avec la profondeur qu'ils méritent.</span><span class="en">This research now forms the backbone of my analysis, specialist writing and technical translation work in the field of animal protection, allowing me to approach complex subjects with the depth they deserve.</span></p>
-                <a href="https://drive.google.com/file/d/1C0-lTxefOjsnAqFrOd8vVY75GmZS6Vjf/view" target="_blank" rel="noopener" class="pub-read-link"><span class="fr">Demander l'accès au mémoire</span><span class="en">Request access to the thesis</span></a>
+
               </div>
             </div>
           </div>
@@ -892,7 +907,7 @@
           <div class="publication-header">
             <div class="publication-header-left">
               <span class="publication-domain"><span class="fr">Traductologie</span><span class="en">Translation Studies</span></span>
-              <p class="publication-title"><span class="fr">Traduction et étude traductologique d'un rapport scientifique de la Commission Valencienne espagnole sur l'extinction progressive des abeilles au niveau mondial et sur les effets nocifs des insecticides</span><span class="en">Translation and Translatological Study of a Scientific Report by the Spanish Valencian Commission on the Progressive Extinction of Bees and the Harmful Effects of Insecticides</span></p>
+              <p class="publication-title"><span class="fr">Traduction et étude traductologique d'un rapport scientifique de la Commission Valencienne espagnole sur l'extinction progressive des abeilles au niveau mondial et sur les effets nocifs des insecticides</span><span class="en">Translation and Translatological Study of a Scientific Report by the Valencian Commission on the Global Decline of Bee Populations and the Harmful Effects of Insecticides</span></p>
               <p class="publication-formation"><span class="fr">Mémoire de recherche · Master en Communication Interculturelle et Traduction · ISIT Paris</span><span class="en">Research dissertation · Master's in Intercultural Communication and Translation · ISIT Paris</span></p>
             </div>
             <button class="pub-expand-btn" data-pub-target="pub-2" aria-expanded="false">+</button>
@@ -906,7 +921,7 @@
               <div>
                 <p class="pub-block-title"><span class="fr">Réflexion traductologique</span><span class="en">Translation theory</span></p>
                 <p class="pub-block-text"><span class="fr">Réflexion sur les enjeux d'équivalence, de localisation et de transmission des savoirs scientifiques dans un contexte européen, avec une attention particulière portée à la dimension pédagogique du texte source. Traduire la science, c'est aussi la rendre compréhensible sans la dénaturer.</span><span class="en">A theoretical reflection on equivalence, localisation and the transmission of scientific knowledge in a European context, with particular attention to the pedagogical dimension of the source text. Translating science also means making it understandable without distorting it.</span></p>
-                <a href="https://drive.google.com/file/d/1kTblqB0789rsJn47B2TfICaXOzGXICOR/view" target="_blank" rel="noopener" class="pub-read-link"><span class="fr">Demander l'accès au mémoire</span><span class="en">Request access to the thesis</span></a>
+
               </div>
             </div>
           </div>
