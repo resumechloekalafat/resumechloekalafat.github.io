@@ -355,39 +355,50 @@
       font-style: italic; font-size: clamp(1.4rem, 2.5vw, 1.9rem);
       font-weight: 400; margin-bottom: 60px; color: #303636;
     }
-    .publications-list { display: flex; flex-direction: column; gap: 0; }
+    .publications-list { display: flex; flex-direction: column; gap: 20px; }
     .publication-item {
-      padding: 28px 0;
-      border-bottom: 1px solid #E5E3DC;
+      padding: 0;
+      border: 1px solid #E5E3DC;
+      border-radius: 20px;
+      overflow: hidden;
       opacity: 0; transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
     }
-    .publication-item:first-child { border-top: 1px solid #E5E3DC; }
+    .publication-item:first-child { border-top: none; }
     .publication-item.is-visible { opacity: 1; transform: none; }
+    .publication-item:hover {
+      box-shadow: 0 8px 32px rgba(48,54,54,0.08);
+    }
     .publication-header {
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;
+      padding: 32px 36px;
+      background: #fff;
+      cursor: pointer;
     }
     .publication-header-left { flex: 1; }
     .publication-domain {
       display: inline-block; font-size: 0.62rem; font-weight: 600;
       text-transform: uppercase; letter-spacing: 0.12em;
-      color: #D4967D; margin-bottom: 8px;
+      color: #D4967D; background: rgba(212,150,125,0.1);
+      padding: 3px 12px; border-radius: 50px; margin-bottom: 14px;
+      width: fit-content;
     }
     .publication-title {
       font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
-      font-size: 0.98rem; font-weight: 400; color: #303636;
-      line-height: 1.45; margin-bottom: 4px;
+      font-size: 1.05rem; font-weight: 400; color: #303636;
+      line-height: 1.5; margin-bottom: 10px;
     }
     .publication-formation {
-      font-size: 0.75rem; font-weight: 500; color: #495A58;
+      font-size: 0.72rem; font-weight: 500; color: #9aaba9;
+      letter-spacing: 0.03em;
     }
     .pub-expand-btn {
       display: flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px; border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       background: rgba(212,150,125,0.1); border: 1px solid rgba(212,150,125,0.3);
-      color: #D4967D; font-size: 1.1rem; line-height: 1;
+      color: #D4967D; font-size: 1.2rem; line-height: 1;
       cursor: pointer; transition: transform 0.3s ease, background 0.2s ease;
-      flex-shrink: 0; padding: 0;
+      flex-shrink: 0; padding: 0; margin-top: 4px;
     }
     .pub-expand-btn:hover { background: rgba(212,150,125,0.2); }
     .pub-expand-btn.is-open { transform: rotate(45deg); }
@@ -398,15 +409,14 @@
     }
     .publication-extra.is-open { max-height: 800px; opacity: 1; }
     .publication-extra-inner {
-      margin-top: 24px;
+      margin-top: 0;
       display: grid; grid-template-columns: 1fr 1fr; gap: 0;
       background: linear-gradient(135deg, rgba(212,150,125,0.05) 0%, rgba(212,150,125,0.02) 100%);
-      border: 1px solid rgba(212,150,125,0.18);
-      border-radius: 16px;
+      border-top: 1px solid rgba(212,150,125,0.18);
       overflow: hidden;
     }
     .publication-extra-inner > div {
-      padding: 28px 32px;
+      padding: 28px 36px;
     }
     .publication-extra-inner > div:first-child {
       border-right: 1px solid rgba(212,150,125,0.15);
@@ -434,6 +444,8 @@
     @media (max-width: 768px) {
       .publication-extra-inner { grid-template-columns: 1fr; }
       .publication-extra-inner > div:first-child { border-right: none; border-bottom: 1px solid rgba(212,150,125,0.15); }
+      .publication-header { padding: 24px; }
+      .publication-extra-inner > div { padding: 20px 24px; }
     }
 
     /* Dropdown */
@@ -881,7 +893,7 @@
           <div class="publication-header">
             <div class="publication-header-left">
               <span class="publication-domain"><span class="fr">Droit des animaux</span><span class="en">Animal Law</span></span>
-              <p class="publication-title"><span class="fr">De la distinction domestique/sauvage à une protection unifiée de l'animal — réflexion sur l'évolution du droit français au regard des évolutions européennes</span><span class="en">From the Domestic/Wild Distinction to a Unified Animal Protection Framework — a reflection on the evolution of French law in light of European developments</span></p>
+              <p class="publication-title"><span class="fr">De la distinction domestique/sauvage à une protection unifiée de l'animal&nbsp;: réflexion sur l'évolution du droit français au regard des évolutions européennes</span><span class="en">From the Domestic/Wild Distinction to a Unified Animal Protection Framework: a reflection on the evolution of French law in light of European developments</span></p>
               <p class="publication-formation"><span class="fr">Mémoire de recherche · Diplôme en Droit des Animaux · Université de Toulon</span><span class="en">Research dissertation · Degree in Animal Law · University of Toulon</span></p>
             </div>
             <button class="pub-expand-btn" data-pub-target="pub-1" aria-expanded="false">+</button>
