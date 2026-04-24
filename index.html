@@ -520,6 +520,71 @@
       .header-name-main::after { width: 36px; }
     }
 
+
+    /* ── COMPTEURS HERO ── */
+    .hero-counters {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-bottom: 24px;
+      border: 1px solid rgba(212,150,125,0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(212,150,125,0.04);
+    }
+    .hero-counter-item {
+      flex: 1;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .hero-counter-divider {
+      width: 1px;
+      background: rgba(212,150,125,0.2);
+      flex-shrink: 0;
+    }
+    .hero-counter-number {
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      line-height: 1;
+    }
+    .counter {
+      font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-weight: 400;
+      color: #D4967D;
+      line-height: 1;
+    }
+    .counter-unit {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #D4967D;
+      opacity: 0.7;
+    }
+    .hero-counter-label {
+      font-size: 0.76rem;
+      line-height: 1.5;
+      color: #495A58;
+    }
+    .hero-impact-sentence {
+      font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.3vw, 0.97rem);
+      line-height: 1.8;
+      color: #303636;
+      border-left: 2px solid #D4967D;
+      padding-left: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .hero-counters { flex-direction: column; }
+      .hero-counter-divider { width: 100%; height: 1px; }
+    }
   </style>
 </head>
 
@@ -556,9 +621,41 @@
         <img src="chloe.jpeg" alt="Chloé Kalafat" class="hero-portrait" />
       </div>
         <div data-reveal data-delay="2">
+
+          <!-- COMPTEURS -->
+          <div class="hero-counters">
+            <div class="hero-counter-item">
+              <div class="hero-counter-number">
+                <span class="counter" data-target="10">0</span>
+                <span class="counter-unit"><span class="fr">milliards</span><span class="en">billion</span></span>
+              </div>
+              <div class="hero-counter-label">
+                <span class="fr">animaux d'élevage abattus dans l'UE chaque année</span>
+                <span class="en">farmed animals slaughtered in the EU every year</span>
+              </div>
+            </div>
+            <div class="hero-counter-divider"></div>
+            <div class="hero-counter-item">
+              <div class="hero-counter-number">
+                <span class="counter" data-target="12">0</span>
+                <span class="counter-unit"><span class="fr">millions</span><span class="en">million</span></span>
+              </div>
+              <div class="hero-counter-label">
+                <span class="fr">animaux utilisés à des fins scientifiques dans l'UE chaque année</span>
+                <span class="en">animals used for scientific purposes in the EU each year</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phrase d'impact -->
+          <p class="hero-impact-sentence">
+            <span class="fr">Chacun de ces animaux évolue toute son existence dans des conditions où ses <strong>besoins physiologiques, comportementaux et émotionnels</strong> les plus élémentaires ne sont ni reconnus ni respectés.</span>
+            <span class="en">Each of these animals spends its entire existence in conditions where its most basic <strong>physiological, behavioural and emotional needs</strong> are neither recognised nor met.</span>
+          </p>
+
           <p class="hero-lead hero-lead-justified">
-            <span class="fr">Chaque année, <strong>près de 10 milliards d'animaux d'élevage sont abattus dans l'Union européenne</strong>. À cela s'ajoutent en moyenne <strong>12 millions d'animaux utilisés à des fins scientifiques</strong> à l'échelle de l'UE. Chacun de ces animaux évolue toute son existence dans des conditions où ses <strong>besoins physiologiques, comportementaux et émotionnels</strong> les plus élémentaires ne sont ni reconnus ni respectés. Ces chiffres traduisent l'ampleur de systèmes qui, dans leur forme actuelle, ne sont ni écologiquement soutenables ni éthiquement défendables, et dont la transformation adviendra par le biais d'un <strong>mouvement coordonné</strong> : une évolution des <strong>pratiques alimentaires et des représentations sociales</strong>, des <strong>solutions de transition cohérentes pour les acteurs industriels</strong>, et une <strong>volonté politique et réglementaire réelle</strong> à l'échelle européenne.<br><br>C'est cette conviction qui m'a conduite à construire un parcours à l'intersection de la <strong>communication stratégique internationale</strong>, de la <strong>traduction</strong> et du <strong>droit des animaux</strong>, complété par une formation en <strong>éthologie</strong> et en <strong>réglementation européenne du bien-être animal</strong>, et des engagements bénévoles sur le terrain.<br><br>J'apporte une expertise en <strong>communication stratégique, traduction et médiation interculturelle</strong>, combinée à une connaissance fine des <strong>cadres juridiques européens</strong> et de l'éthologie, pour rendre des enjeux complexes <strong>lisibles et actionnables, en plusieurs langues</strong>, auprès d'acteurs aux logiques et aux intérêts différents : institutions, industries, ONG, décideurs publics.<br><br>Ma conviction de fond : la manière dont une société traite les animaux révèle sa <strong>cohérence éthique</strong>. Je veux contribuer à ce que leurs intérêts soient pleinement intégrés dans nos <strong>systèmes juridiques, politiques et industriels</strong>.</span>
-            <span class="en">Every year, <strong>nearly 10 billion farmed animals are slaughtered in the European Union</strong>. In addition, an average of <strong>12 million animals are used for scientific purposes</strong> across the EU each year. Each of these animals spends its entire existence in conditions where its most basic <strong>physiological, behavioural and emotional needs</strong> are neither recognised nor met. These figures reflect the scale of systems that, in their current form, are neither ecologically sustainable nor ethically defensible — systems whose transformation will come through a <strong>coordinated movement</strong>: a shift in <strong>dietary practices and social representations</strong>, <strong>coherent transition solutions for industry actors</strong>, and genuine <strong>political and regulatory will</strong> at the European level.<br><br>It is this conviction that led me to build a career at the intersection of <strong>international strategic communication</strong>, <strong>translation</strong> and <strong>animal law</strong>, complemented by training in <strong>ethology</strong> and <strong>European animal welfare regulation</strong>, alongside field-based voluntary commitments.<br><br>I bring expertise in <strong>strategic communication, translation and intercultural mediation</strong>, combined with a deep understanding of <strong>European legal frameworks</strong> and ethology, to make complex issues <strong>legible and actionable, across multiple languages</strong>, for actors with different logics and interests: institutions, industries, NGOs and policymakers.<br><br>My core conviction: the way a society treats animals reveals its <strong>ethical coherence</strong>. I want to contribute to ensuring that their interests are fully integrated into our <strong>legal, political and industrial systems</strong>.</span>
+            <span class="fr">Ces chiffres traduisent l'ampleur de systèmes qui, dans leur forme actuelle, ne sont ni écologiquement soutenables ni éthiquement défendables, et dont la transformation adviendra par le biais d'un <strong>mouvement coordonné</strong> : une évolution des <strong>pratiques alimentaires et des représentations sociales</strong>, des <strong>solutions de transition cohérentes pour les acteurs industriels</strong>, et une <strong>volonté politique et réglementaire réelle</strong> à l'échelle européenne.<br><br>C'est cette conviction qui m'a conduite à construire un parcours à l'intersection de la <strong>communication stratégique internationale</strong>, de la <strong>traduction</strong> et du <strong>droit des animaux</strong>, complété par une formation en <strong>éthologie</strong> et en <strong>réglementation européenne du bien-être animal</strong>, et des engagements bénévoles sur le terrain.<br><br>J'apporte une expertise en <strong>communication stratégique, traduction et médiation interculturelle</strong>, combinée à une connaissance fine des <strong>cadres juridiques européens</strong> et de l'éthologie, pour rendre des enjeux complexes <strong>lisibles et actionnables, en plusieurs langues</strong>, auprès d'acteurs aux logiques et aux intérêts différents : institutions, industries, ONG, décideurs publics.<br><br>Ma conviction de fond : la manière dont une société traite les animaux révèle sa <strong>cohérence éthique</strong>. Je veux contribuer à ce que leurs intérêts soient pleinement intégrés dans nos <strong>systèmes juridiques, politiques et industriels</strong>.</span>
+            <span class="en">These figures reflect the scale of systems that, in their current form, are neither ecologically sustainable nor ethically defensible — systems whose transformation will come through a <strong>coordinated movement</strong>: a shift in <strong>dietary practices and social representations</strong>, <strong>coherent transition solutions for industry actors</strong>, and genuine <strong>political and regulatory will</strong> at the European level.<br><br>It is this conviction that led me to build a career at the intersection of <strong>international strategic communication</strong>, <strong>translation</strong> and <strong>animal law</strong>, complemented by training in <strong>ethology</strong> and <strong>European animal welfare regulation</strong>, alongside field-based voluntary commitments.<br><br>I bring expertise in <strong>strategic communication, translation and intercultural mediation</strong>, combined with a deep understanding of <strong>European legal frameworks</strong> and ethology, to make complex issues <strong>legible and actionable, across multiple languages</strong>, for actors with different logics and interests: institutions, industries, NGOs and policymakers.<br><br>My core conviction: the way a society treats animals reveals its <strong>ethical coherence</strong>. I want to contribute to ensuring that their interests are fully integrated into our <strong>legal, political and industrial systems</strong>.</span>
           </p>
           <div class="hero-contact-icons">
             <a href="https://www.linkedin.com/in/chloe-kalafat/" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="LinkedIn">
@@ -1080,6 +1177,33 @@
         localStorage.setItem('ck-lang', newLang);
       });
     }
+
+    // Animated counters
+    function animateCounter(el) {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const duration = 1800;
+      const start = performance.now();
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutExpo
+        const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    }
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.counter').forEach(animateCounter);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    const heroCounters = document.querySelector('.hero-counters');
+    if (heroCounters) counterObserver.observe(heroCounters);
   </script>
 
 </body>
