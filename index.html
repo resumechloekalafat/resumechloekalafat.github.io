@@ -298,8 +298,10 @@
     .xp-desc {
       font-size: 0.8rem; line-height: 1.8; color: #303636;
       opacity: 0.75; margin-bottom: 14px;
+      max-width: 100%; width: 100%;
     }
     .xp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .xp-content { width: 100%; min-width: 0; }
     .xp-tag {
       font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.08em; color: #495A58;
@@ -766,7 +768,7 @@
             </div>
             <div class="timeline-item">
               <span class="timeline-year">2013</span>
-              <p class="timeline-title"><span class="fr">Classe préparatoire littéraire — Hypokhâgne</span><span class="en">Preparatory class — Humanities (Hypokhâgne)</span></p>
+              <p class="timeline-title"><span class="fr">Classe préparatoire littéraire — Hypokhâgne</span><span class="en">Humanities Preparatory Class (Hypokhâgne)</span></p>
               <p class="timeline-org"><span class="fr">Lycée Descartes, Antony</span><span class="en">Lycée Descartes, Antony, France</span></p>
             </div>
           </div>
@@ -940,10 +942,10 @@
           </button>
           <div class="benevole-extra" id="expand-code-animal">
             <div class="benevole-missions">
-              <h4><span class="fr">Missions</span><span class="en">Missions</span></h4>
+              <h4><span class="fr">Missions</span><span class="en">Key responsibilities</span></h4>
               <ul>
                 <li><span class="fr">Analyses d'actualité : décryptage des évolutions majeures du secteur (Liste Rouge UICN 2025, développement des parcs marins en Chine, évolutions réglementaires nationales et européennes)</span><span class="en">Current affairs analysis: tracking major developments across the sector (IUCN Red List 2025, expansion of marine parks in China, national and EU regulatory changes)</span></li>
-                <li><span class="fr">Articles scientifiques vulgarisés : bien-être animal en captivité, études éthologiques sur les cétacés, impacts psychologiques et physiologiques de la captivité</span><span class="en">Accessible science writing: animal welfare in captivity, ethological studies on cetaceans, psychological and physiological effects of captivity</span></li>
+                <li><span class="fr">Articles scientifiques vulgarisés : bien-être animal en captivité, études éthologiques sur les cétacés, impacts psychologiques et physiologiques de la captivité</span><span class="en">Science communication: animal welfare in captivity, ethological studies on cetaceans, psychological and physiological effects of captivity</span></li>
                 <li><span class="fr">Enquêtes et investigations : industrie des parcs aquatiques, expansion internationale de la captivité, nouveaux modèles économiques exploitant les animaux sauvages</span><span class="en">Investigative pieces: the aquarium industry, international captivity expansion, emerging business models exploiting wild animals</span></li>
                 <li><span class="fr">Recherche documentaire : analyse critique de sources scientifiques peer-reviewed, réglementaires (directives européennes) et médiatiques</span><span class="en">Documentary research: critical analysis of peer-reviewed sources, EU directives and media coverage</span></li>
                 <li><span class="fr">Adaptation du ton selon les objectifs et publics cibles (pédagogique, militant, informatif, académique)</span><span class="en">Adapting tone and register to suit different goals and audiences (educational, advocacy-driven, informational, academic)</span></li>
@@ -961,7 +963,7 @@
         <div class="benevole-card">
           <span class="benevole-tag"><span class="fr">Engagement citoyen et causes à impact</span><span class="en">Civic engagement and impact causes</span></span>
           <h3>Effective Altruism</h3>
-          <p class="benevole-role"><span class="fr">Membre active du mouvement</span><span class="en">Active community member</span></p>
+          <p class="benevole-role"><span class="fr">Membre active du mouvement</span><span class="en">Active movement member</span></p>
           <p class="benevole-desc"><span class="fr">Engagement autour des problématiques contemporaines à fort impact : bien-être animal, santé globale, risques existentiels. Participation aux événements du mouvement, ateliers de réflexion stratégique et groupes de travail thématiques pour développer et promouvoir des solutions fondées sur les données probantes.</span><span class="en">Engaged on high-impact contemporary issues including animal welfare, global health and existential risks. Active participation in movement events, strategic thinking workshops and thematic working groups focused on developing and advancing evidence-based solutions.</span></p>
         </div>
 
@@ -977,7 +979,7 @@
         <div class="benevole-card">
           <span class="benevole-tag"><span class="fr">Terrain</span><span class="en">Field work</span></span>
           <h3><span class="fr">CHENE — Centre de sauvegarde de la faune sauvage</span><span class="en">CHENE — Wildlife Rescue Centre</span></h3>
-          <p class="benevole-role"><span class="fr">Soigneuse bénévole</span><span class="en">Volunteer wildlife carer</span></p>
+          <p class="benevole-role"><span class="fr">Soigneuse bénévole</span><span class="en">Wildlife care volunteer</span></p>
           <p class="benevole-desc"><span class="fr">Participation aux soins des animaux sauvages recueillis, entretien des cages et enclos.</span><span class="en">Caring for rescued wildlife, maintaining enclosures and supporting daily operations.</span></p>
         </div>
 
@@ -1170,11 +1172,24 @@
     const langSwitch = document.getElementById('langSwitch');
     const savedLang = localStorage.getItem('ck-lang') || 'fr';
     htmlRoot.lang = savedLang;
+
+    function updateMeta(lang) {
+      if (lang === 'en') {
+        document.title = 'Background — Chloé Kalafat';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Academic background, professional experience and volunteer work of Chloé Kalafat.');
+      } else {
+        document.title = 'Parcours — Chloé Kalafat';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Parcours académique, expériences terrain et engagements bénévoles de Chloé Kalafat.');
+      }
+    }
+    updateMeta(savedLang);
+
     if (langSwitch) {
       langSwitch.addEventListener('click', () => {
         const newLang = htmlRoot.lang === 'fr' ? 'en' : 'fr';
         htmlRoot.lang = newLang;
         localStorage.setItem('ck-lang', newLang);
+        updateMeta(newLang);
       });
     }
 
