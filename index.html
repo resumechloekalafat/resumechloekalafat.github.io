@@ -244,7 +244,7 @@
       transition: max-height 0.4s ease, opacity 0.3s ease;
       opacity: 0;
     }
-    .benevole-extra.is-open { max-height: 600px; opacity: 1; }
+    .benevole-extra.is-open { max-height: 900px; opacity: 1; }
     .benevole-missions { margin-top: 14px; padding-top: 14px; border-top: 1px solid #E5E3DC; }
     .benevole-missions h4 {
       font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
@@ -351,9 +351,7 @@
     /* ── PUBLICATIONS ── */
     .publications-section { padding: 100px 0; border-bottom: 1px solid #E5E3DC; }
     .publications-section h2 {
-      font-family: 'Baskerville', 'Libre Baskerville', Georgia, serif;
-      font-style: italic; font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 400; margin-bottom: 60px; color: #303636;
+      margin-bottom: 60px;
     }
     .publications-list { display: flex; flex-direction: column; gap: 20px; }
     .publication-item {
@@ -577,7 +575,8 @@
     .timelines-section h2,
     .xp-section h2,
     .benevoles-section h2,
-    .skills-section h2 {
+    .skills-section h2,
+    .publications-section h2 {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -592,7 +591,8 @@
     .timelines-section h2::after,
     .xp-section h2::after,
     .benevoles-section h2::after,
-    .skills-section h2::after {
+    .skills-section h2::after,
+    .publications-section h2::after {
       content: '';
       display: block;
       width: 48px;
@@ -609,7 +609,9 @@
     .benevoles-section h2 .fr,
     .benevoles-section h2 .en,
     .skills-section h2 .fr,
-    .skills-section h2 .en {
+    .skills-section h2 .en,
+    .publications-section h2 .fr,
+    .publications-section h2 .en {
       font-family: 'Cormorant Garamond', 'Baskerville', Georgia, serif;
       font-style: italic;
       font-size: clamp(1.7rem, 3vw, 2.4rem);
@@ -893,7 +895,7 @@
           <div class="publication-header">
             <div class="publication-header-left">
               <span class="publication-domain"><span class="fr">Droit des animaux</span><span class="en">Animal Law</span></span>
-              <p class="publication-title"><span class="fr">De la distinction domestique/sauvage à une protection unifiée de l'animal&nbsp;: réflexion sur l'évolution du droit français au regard des évolutions européennes</span><span class="en">From the Domestic/Wild Distinction to a Unified Animal Protection Framework: a reflection on the evolution of French law in light of European developments</span></p>
+              <p class="publication-title"><span class="fr">De la distinction domestique/sauvage à une protection unifiée de l'animal&nbsp;: repenser le droit français à la lumière des évolutions européennes</span><span class="en">From the Domestic/Wild Distinction to a Unified Animal Protection Framework: Rethinking French Law in Light of European Developments</span></p>
               <p class="publication-formation"><span class="fr">Mémoire de recherche · Diplôme en Droit des Animaux · Université de Toulon</span><span class="en">Research dissertation · Degree in Animal Law · University of Toulon</span></p>
             </div>
             <button class="pub-expand-btn" data-pub-target="pub-1" aria-expanded="false">+</button>
@@ -919,7 +921,7 @@
           <div class="publication-header">
             <div class="publication-header-left">
               <span class="publication-domain"><span class="fr">Traductologie</span><span class="en">Translation Studies</span></span>
-              <p class="publication-title"><span class="fr">Traduction et étude traductologique d'un rapport scientifique de la Commission Valencienne espagnole sur l'extinction progressive des abeilles au niveau mondial et sur les effets nocifs des insecticides</span><span class="en">Translation and Translatological Study of a Scientific Report by the Valencian Commission on the Global Decline of Bee Populations and the Harmful Effects of Insecticides</span></p>
+              <p class="publication-title"><span class="fr">Traduction et étude traductologique d'un rapport scientifique de la Commission valencienne espagnole sur l'extinction progressive des abeilles au niveau mondial et sur les effets nocifs des insecticides</span><span class="en">Translation and Translatological Study of a Scientific Report by the Valencian Commission on the Global Decline of Bee Populations and the Harmful Effects of Insecticides</span></p>
               <p class="publication-formation"><span class="fr">Mémoire de recherche · Master en Communication Interculturelle et Traduction · ISIT Paris</span><span class="en">Research dissertation · Master's in Intercultural Communication and Translation · ISIT Paris</span></p>
             </div>
             <button class="pub-expand-btn" data-pub-target="pub-2" aria-expanded="false">+</button>
@@ -1117,6 +1119,32 @@
               <strong><span class="fr">Impact</span><span class="en">Impact</span></strong>
               <span class="fr">Contribution active à l'information du public via des contenus rigoureux et sourcés, renforçant la crédibilité du discours par l'apport de données factuelles et scientifiques.</span>
               <span class="en">Active contribution to public awareness through rigorous, well-sourced content, strengthening advocacy credibility with factual and scientific data.</span>
+            </div>
+            <div class="benevole-missions" style="margin-top:14px; padding-top:14px; border-top:1px solid #E5E3DC;">
+              <h4><span class="fr">Articles publiés</span><span class="en">Published articles</span></h4>
+              <ul style="display:flex; flex-direction:column; gap:8px;">
+                <li style="padding-left:0; display:flex; flex-direction:column; gap:2px;">
+                  <a href="https://www.code-animal.com/le-bien-etre-en-cage-mythe-ou-realite/" target="_blank" rel="noopener" style="font-size:0.78rem; color:#D4967D; text-decoration:none; font-weight:500; line-height:1.5; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="fr">Le bien-être en cage : mythe ou réalité ?</span>
+                    <span class="en">Welfare in a cage: myth or reality?</span>
+                    <svg style="display:inline;margin-left:4px;vertical-align:middle;" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </li>
+                <li style="padding-left:0; display:flex; flex-direction:column; gap:2px;">
+                  <a href="https://www.code-animal.com/captivite-des-cetaces-la-chine-a-contre-courant/" target="_blank" rel="noopener" style="font-size:0.78rem; color:#D4967D; text-decoration:none; font-weight:500; line-height:1.5; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="fr">Captivité des cétacés : la Chine à contre-courant</span>
+                    <span class="en">Cetacean captivity: China going against the tide</span>
+                    <svg style="display:inline;margin-left:4px;vertical-align:middle;" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </li>
+                <li style="padding-left:0; display:flex; flex-direction:column; gap:2px;">
+                  <a href="https://www.code-animal.com/biodiversite-en-chute-libre-la-liste-rouge-2025-de-luicn-revele-lurgence-absolue/" target="_blank" rel="noopener" style="font-size:0.78rem; color:#D4967D; text-decoration:none; font-weight:500; line-height:1.5; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <span class="fr">Biodiversité en chute libre : la Liste Rouge 2025 de l'UICN révèle l'urgence absolue</span>
+                    <span class="en">Biodiversity in freefall: the IUCN 2025 Red List reveals absolute urgency</span>
+                    <svg style="display:inline;margin-left:4px;vertical-align:middle;" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
